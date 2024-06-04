@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.summary = "ActiveRecord adapter for PostGIS, based on RGeo."
   spec.description =
     "ActiveRecord connection adapter for PostGIS. It is based on the stock " \
-    "PostgreSQL adapter, and adds built-in support for the spatial extensions "\
+    "PostgreSQL adapter, and adds built-in support for the spatial extensions " \
     "provided by PostGIS. It uses the RGeo library to represent spatial data in Ruby."
 
   spec.version = ActiveRecord::ConnectionAdapters::PostGIS::VERSION
