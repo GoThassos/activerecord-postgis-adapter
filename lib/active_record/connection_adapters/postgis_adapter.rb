@@ -35,6 +35,8 @@ module ActiveRecord
   end
 
   module ConnectionAdapters
+    register "postgis", "ActiveRecord::ConnectionAdapters::PostGISAdapter", "active_record/connection_adapters/postgis_adapter"
+
     class PostGISAdapter < PostgreSQLAdapter
       ADAPTER_NAME = 'PostGIS'
 
@@ -106,7 +108,7 @@ module ActiveRecord
           @native_database_types ||= begin
             default_types = PostgreSQLAdapter.native_database_types
             default_types.merge({
-              geography:           { name: "geography" },
+                                  geography:           { name: "geography" },
               geometry:            { name: "geometry" },
               geometry_collection: { name: "geometry_collection" },
               line_string:         { name: "line_string" },
@@ -116,7 +118,7 @@ module ActiveRecord
               spatial:             { name: "geometry" },
               st_point:            { name: "st_point" },
               st_polygon:          { name: "st_polygon" }
-            })
+                                })
           end
         end
       end
